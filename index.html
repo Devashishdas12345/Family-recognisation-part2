@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Family recognition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+   <link rel="stylesheet" href="style.css">
+  
+  </head>
+
+  <body>
+  <div class="container">
+    <center>
+      <a href="" id="link" download="family.png"></a>
+      <h3 class="btn btn-info heading"><b>Family Recognition</b></h3>
+      <br>
+      <br>
+      <p style="font-size: 22px; font-weight: bolder;">Modal is trained to identify the following objects </p>
+      <div style="background-color: rgb(0, 140, 255); text-align: left;"><b class="name_of_objects">Father</b><hr><b class="name_of_objects">Mother</b><hr><b class="name_of_objects">Grandfather</b><hr><b class="name_of_objects">Me</b><hr></div>
+      <label class="btn-danger">Click on Capture Image button and wait for 15 seconds for the photo to be captured.</label>
+      <br>
+      <br>
+      <label>Webcam View - </label>
+      <div id="camera"></div>
+      <br>
+      <div id="result"></div>
+      <br>
+      <button class="btn btn-primary" onclick="take_snapshot()"><b>Capture Image</b></button>
+      <br>
+      <br>
+      <button class="btn btn-success" onclick="check()"><b>Identify Image</b></button>
+      <br>
+      <br>
+      <p style="font-size: 22px;">Family Member : <b><span id="result_object_name" style="font-weight: bolder; color: rgb(255, 0, 0);"></span></b></p>
+      <p style="font-size: 22px;">Accuracy : <b><span id="result_object_accuracy" style="font-weight: bolder; color: rgb(0 , 0, 255);"></span></b></p>
+    </center>
+  </div>
+<script src="main.js"></script>
+<script async src="https://drv.tw/inc/wd.js"></script></body>
+  </body>
+</html>
+
+ 
